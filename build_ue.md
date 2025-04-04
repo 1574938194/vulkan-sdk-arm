@@ -4,19 +4,22 @@
 git clone https://github.com/EpicGames/UnrealEngine
 ```
 
-2. Run setup script:
+2. Edit "UnrealEngine/Engine/Build/BatchFiles/Linux/":
+
+```
+SetupDotnet.sh    =>ARCH=arm64
+GitDependencies.sh   =>linux-arm64
+```
+
+4. Run setup script:
 
 ```
 ./Setup.sh
 ```
 
-ii. Edit 
-UnrealEngine/Engine/Build/BatchFiles/Linux/
-SetupDotnet.sh    =>ARCH=arm64
-GitDependencies.sh   =>linux-arm64
 
 
-3. Run project file generation script:
+4. Run project file generation script:
 
 ```
 ./GenerateProjectFiles.sh
@@ -33,7 +36,7 @@ GenerateProjectFiles ERROR: Failed to build UnrealBuildTool
 
 try setting environment variable `DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1`, or installing [ICU v50](https://icu.unicode.org/download/50) (courtesy of @debian-user-france1).
 
-4. Finally, run the build:
+5. Finally, run the build:
 
 ```
 make
