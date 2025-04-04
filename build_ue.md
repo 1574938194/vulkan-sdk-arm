@@ -10,6 +10,12 @@ git clone https://github.com/EpicGames/UnrealEngine
 ./Setup.sh
 ```
 
+ii. Edit 
+UnrealEngine/Engine/Build/BatchFiles/Linux/
+SetupDotnet.sh    =>ARCH=arm64
+GitDependencies.sh   =>linux-arm64
+
+
 3. Run project file generation script:
 
 ```
